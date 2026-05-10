@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 import { HuddleShell } from "@/components/huddle-shell";
@@ -27,7 +27,7 @@ const fallbackState: DiscordState = {
   state: "not_started"
 };
 
-export default function DiscordPage() {
+function DiscordPageContent() {
   const { user, loading } = useAuth();
   const searchParams = useSearchParams();
   const [discordState, setDiscordState] = useState<DiscordState>(fallbackState);
@@ -324,5 +324,19 @@ export default function DiscordPage() {
         </section>
       )}
     </HuddleShell>
+  );
+}
+
+export default function DiscordPage() {
+  return (
+    <Suspense
+      fallback={
+        <HuddleShell mode="member" primaryAction={{ href: "/member", label: "Back home" }}>
+          <div />
+        </HuddleShell>
+      }
+    >
+      <DiscordPageContent />
+    </Suspense>
   );
 }
