@@ -1,0 +1,202 @@
+.hero {
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.92fr);
+  gap: 18px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    linear-gradient(160deg, rgba(212, 166, 58, 0.08), transparent 42%);
+}
+
+.heroCopy {
+  position: relative;
+  padding: 24px;
+}
+
+.heroCopy::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(130deg, rgba(166, 58, 50, 0.08), transparent 36%),
+    radial-gradient(circle at 80% 10%, rgba(212, 166, 58, 0.14), transparent 20%);
+  pointer-events: none;
+}
+
+.eyebrow {
+  position: relative;
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.heroCopy h1 {
+  position: relative;
+  margin: 0;
+  font-family: var(--font-display), Impact, sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  line-height: 0.9;
+  max-width: 8ch;
+}
+
+.heroBody,
+.fieldHelp,
+.banner {
+  line-height: 1.55;
+}
+
+.heroBody {
+  position: relative;
+  margin: 18px 0 0;
+  max-width: 36rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.metaStrip {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.metaStrip div {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.metaStrip strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 1.08rem;
+}
+
+.formPanel {
+  display: grid;
+  gap: 14px;
+  padding: 24px 24px 24px 0;
+}
+
+.formCard {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    linear-gradient(180deg, rgba(166, 58, 50, 0.12), transparent 24%),
+    var(--surface);
+}
+
+.cardLabel {
+  margin: 0 0 12px;
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.72;
+  font-weight: 700;
+}
+
+.joinForm {
+  display: grid;
+  gap: 14px;
+}
+
+.fieldGrid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.field input {
+  min-height: 52px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  font: inherit;
+}
+
+.field input::placeholder {
+  color: rgba(246, 241, 232, 0.4);
+}
+
+.field input:focus {
+  outline: 2px solid rgba(212, 166, 58, 0.45);
+  outline-offset: 2px;
+}
+
+.fieldHelp {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.submitButton {
+  min-height: 54px;
+  padding: 15px 22px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--gold);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.banner {
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(166, 58, 50, 0.16);
+  color: var(--text);
+}
+
+@media (max-width: 940px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .formPanel {
+    padding: 0 24px 24px;
+  }
+}
+
+@media (max-width: 720px) {
+  .metaStrip,
+  .fieldGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroCopy,
+  .formCard {
+    padding: 20px;
+  }
+
+  .heroCopy h1 {
+    font-size: clamp(2.5rem, 14vw, 4.2rem);
+  }
+}

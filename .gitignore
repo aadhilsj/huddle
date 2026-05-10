@@ -1,0 +1,15 @@
+.next
+node_modules
+.vercel
+.env
+.env.local
+.env.production
+dist
+.DS_Store
+.codex-bin
+.npm-cache
+.tmp
+tmp
+tsconfig.tsbuildinfo
+
+gstack

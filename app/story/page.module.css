@@ -1,0 +1,324 @@
+.storyHero,
+.sectionBlock {
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.storyHero {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: #131821;
+}
+
+.heroImage,
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.heroOverlay {
+  background:
+    linear-gradient(180deg, rgba(6, 8, 12, 0.42), rgba(6, 8, 12, 0.58)),
+    radial-gradient(circle at center, rgba(6, 8, 12, 0.12), rgba(6, 8, 12, 0.68) 78%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 58rem;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.storyHero h1,
+.sectionHeading h2 {
+  margin: 0;
+}
+
+.storyHero h1,
+.sectionHeading h2,
+.ideaQuote p {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.storyHero h1 {
+  font-size: clamp(2.1rem, 3.7vw, 3.35rem);
+  line-height: 1.02;
+  max-width: 22ch;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+.heroBody,
+.heroNote,
+.sectionBody,
+.signalGrid p,
+.ideaList p {
+  line-height: 1.6;
+}
+
+.heroBody {
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: 1.02rem;
+  margin-top: 16px;
+}
+
+.heroNote {
+  max-width: 30rem;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.sectionBlock {
+  padding: 24px 28px;
+  background: #111720;
+}
+
+.sectionBlock:nth-of-type(2) {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent),
+    #10161f;
+}
+
+.sectionBlock:nth-of-type(3) {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(166, 58, 50, 0.12), transparent 26%),
+    #0f141c;
+}
+
+.sectionBlock:nth-of-type(4) {
+  background:
+    radial-gradient(circle at 0% 100%, rgba(88, 101, 242, 0.14), transparent 28%),
+    #121922;
+}
+
+.sectionHeading {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.sectionHeading h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2.3rem);
+  line-height: 1.08;
+  max-width: 22ch;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.sectionBody {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--muted);
+}
+
+.imageStatement {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.statementImage,
+.statementOverlay {
+  position: absolute;
+  inset: 0;
+}
+
+.statementImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.statementOverlay {
+  background:
+    linear-gradient(180deg, rgba(7, 9, 13, 0.34), rgba(7, 9, 13, 0.62)),
+    radial-gradient(circle at center, rgba(7, 9, 13, 0.1), rgba(7, 9, 13, 0.74) 78%);
+}
+
+.statementContent {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  gap: 10px;
+  min-height: 320px;
+  padding: 24px;
+}
+
+.statementContent h2 {
+  margin: 0;
+  font-size: clamp(2.3rem, 5vw, 4.5rem);
+  line-height: 0.94;
+  max-width: 10ch;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+.statementBody {
+  max-width: 28rem;
+  margin: 0;
+  color: rgba(246, 241, 232, 0.84);
+  line-height: 1.55;
+}
+
+.signalGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.signalGrid article,
+.ideaList article {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.signalGrid article {
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.signalGrid span,
+.ideaList span {
+  display: inline-block;
+  color: var(--gold);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.signalGrid p,
+.ideaList p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.ideaLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 18px;
+}
+
+.ideaQuote {
+  padding: 4px 0 0;
+  background: transparent;
+  color: var(--text);
+  display: flex;
+  align-items: start;
+}
+
+.ideaQuote p {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.3vw, 2rem);
+  line-height: 1.08;
+  font-weight: 800;
+  max-width: 12ch;
+}
+
+.ideaList {
+  display: grid;
+  gap: 14px;
+}
+
+.ideaList article {
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.ideaList strong,
+.signalGrid strong {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.storyFooter {
+  margin-top: 18px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 0 4px;
+  border-top: 1px solid rgba(246, 241, 232, 0.08);
+}
+
+.storyFooterHeading {
+  display: grid;
+  gap: 8px;
+}
+
+.storyFooterHeading h2 {
+  margin: 0;
+  max-width: 12ch;
+  font-size: clamp(1.5rem, 2.8vw, 2.3rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.storyFooterBody {
+  max-width: 32rem;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+@media (max-width: 980px) {
+  .signalGrid,
+  .ideaLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .storyFooter {
+    display: grid;
+    justify-content: start;
+  }
+}
+
+@media (max-width: 720px) {
+  .storyHero,
+  .sectionBlock,
+  .signalGrid article,
+  .ideaList article,
+  .ideaQuote {
+    padding: 18px;
+  }
+
+  .statementContent {
+    min-height: 280px;
+    padding: 18px;
+  }
+
+  .storyHero h1 {
+    font-size: clamp(2.5rem, 14vw, 4.5rem);
+  }
+}

@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moolah Hero Variant A</title>
+    <style>
+      :root {
+        --bg: #0e1116;
+        --surface: #171b22;
+        --text: #f6f1e8;
+        --muted: #c9c1b5;
+        --gold: #d4a63a;
+        --red: #a63a32;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Arial Narrow", Arial, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 78% 18%, rgba(166, 58, 50, 0.38), transparent 18%),
+          radial-gradient(circle at 20% 24%, rgba(212, 166, 58, 0.2), transparent 18%),
+          linear-gradient(180deg, rgba(255,255,255,0.02), transparent 28%),
+          linear-gradient(135deg, #080a0f 0%, #0e1116 42%, #171b22 100%);
+      }
+      .frame {
+        min-height: 100vh;
+        padding: 24px;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        gap: 28px;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 12px;
+      }
+      .brand { font-weight: 700; }
+      .badge {
+        border: 1px solid rgba(246, 241, 232, 0.25);
+        padding: 10px 14px;
+        border-radius: 999px;
+        color: var(--muted);
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 24px;
+        align-items: end;
+      }
+      .copy {
+        max-width: 760px;
+        display: grid;
+        gap: 18px;
+        align-self: center;
+      }
+      .eyebrow {
+        color: var(--gold);
+        font-size: 13px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(64px, 11vw, 158px);
+        line-height: 0.88;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+      }
+      .sub {
+        max-width: 560px;
+        font-family: system-ui, sans-serif;
+        font-size: 19px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        align-items: center;
+      }
+      .primary, .secondary {
+        padding: 16px 22px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-family: system-ui, sans-serif;
+        font-weight: 700;
+        min-height: 52px;
+        display: inline-flex;
+        align-items: center;
+      }
+      .primary {
+        background: var(--gold);
+        color: #111;
+      }
+      .secondary {
+        border: 1px solid rgba(246, 241, 232, 0.24);
+        color: var(--text);
+      }
+      .proof {
+        display: grid;
+        gap: 14px;
+        align-content: end;
+      }
+      .poster {
+        min-height: 520px;
+        border: 1px solid rgba(246, 241, 232, 0.12);
+        border-radius: 18px;
+        background:
+          linear-gradient(180deg, rgba(255,255,255,0.04), transparent),
+          linear-gradient(160deg, rgba(212,166,58,0.18), transparent 40%),
+          linear-gradient(180deg, rgba(166,58,50,0.24), transparent 32%),
+          #12161d;
+        position: relative;
+        overflow: hidden;
+      }
+      .poster::before {
+        content: "";
+        position: absolute;
+        inset: 18px;
+        border: 1px solid rgba(246, 241, 232, 0.1);
+        border-radius: 14px;
+      }
+      .portrait {
+        position: absolute;
+        inset: 90px 40px 36px 42%;
+        border-radius: 22px 22px 0 0;
+        background:
+          radial-gradient(circle at 55% 22%, rgba(255,255,255,0.18), transparent 12%),
+          linear-gradient(180deg, rgba(255,255,255,0.12), transparent 12%),
+          linear-gradient(180deg, #2b3039 0%, #191d25 55%, #0f1218 100%);
+      }
+      .portrait::before {
+        content: "";
+        position: absolute;
+        inset: 16px 18px 0 18px;
+        background:
+          radial-gradient(circle at 54% 24%, #f0cfaa 0 10%, transparent 11%),
+          radial-gradient(circle at 50% 28%, #2c3139 0 30%, transparent 31%),
+          radial-gradient(circle at 48% 68%, #11161d 0 34%, transparent 35%),
+          linear-gradient(180deg, transparent 0 42%, rgba(212,166,58,0.4) 42% 44%, transparent 44%);
+        opacity: 0.72;
+      }
+      .stat-ribbon {
+        position: absolute;
+        left: 28px;
+        bottom: 28px;
+        padding: 12px 14px;
+        background: rgba(14, 17, 22, 0.88);
+        border: 1px solid rgba(246, 241, 232, 0.12);
+        border-radius: 12px;
+        font-family: system-ui, sans-serif;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .meta {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .meta div {
+        border-top: 1px solid rgba(246, 241, 232, 0.18);
+        padding-top: 10px;
+        font-family: system-ui, sans-serif;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .meta strong {
+        display: block;
+        font-size: 18px;
+        color: var(--text);
+        margin-top: 4px;
+      }
+      @media (max-width: 900px) {
+        .hero { grid-template-columns: 1fr; align-items: start; }
+        .poster { min-height: 420px; }
+        .copy { order: 1; }
+        .proof { order: 2; }
+      }
+      @media (max-width: 560px) {
+        .frame { padding: 18px; gap: 20px; }
+        h1 { font-size: clamp(54px, 18vw, 94px); }
+        .sub { font-size: 17px; }
+        .meta { grid-template-columns: 1fr; }
+        .poster { min-height: 340px; }
+        .portrait { inset: 84px 18px 18px 28%; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="frame">
+      <header class="nav">
+        <div class="brand">Moolah</div>
+        <div class="badge">2026 World Cup</div>
+      </header>
+
+      <section class="hero">
+        <div class="copy">
+          <div class="eyebrow">Paid Competition. Live Rivalry. Real Club Energy.</div>
+          <h1>World Cup<br />Starts Here</h1>
+          <div class="sub">
+            Join the tournament people actually talk about. Real entry fee, real bragging rights,
+            real banter, and a club that keeps living after the final whistle.
+          </div>
+          <div class="cta-row">
+            <a class="primary" href="#">Join the World Cup</a>
+            <a class="secondary" href="#">See how Moolah works</a>
+          </div>
+        </div>
+
+        <div class="proof">
+          <div class="poster">
+            <div class="portrait"></div>
+            <div class="stat-ribbon">Live stakes. Discord banter. Entry closes soon.</div>
+          </div>
+          <div class="meta">
+            <div>Returning players<strong>42</strong></div>
+            <div>Club cities<strong>Colombo / Oslo</strong></div>
+            <div>Format<strong>Paid + social</strong></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  </html>

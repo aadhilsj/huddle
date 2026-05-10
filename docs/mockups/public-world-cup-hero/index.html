@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moolah Hero Comparison</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: #0d1015;
+        color: #f6f1e8;
+      }
+      .wrap {
+        padding: 24px;
+        display: grid;
+        gap: 18px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 28px;
+      }
+      p {
+        margin: 0;
+        color: #c9c1b5;
+        max-width: 860px;
+        line-height: 1.5;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+      .card {
+        border: 1px solid rgba(246, 241, 232, 0.12);
+        border-radius: 16px;
+        overflow: hidden;
+        background: #171b22;
+      }
+      .card header {
+        padding: 14px 16px;
+        border-bottom: 1px solid rgba(246, 241, 232, 0.12);
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+      }
+      .card strong { font-size: 15px; }
+      .card span {
+        color: #c9c1b5;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      iframe {
+        width: 100%;
+        height: 880px;
+        border: 0;
+        background: white;
+      }
+      @media (max-width: 1100px) {
+        .grid { grid-template-columns: 1fr; }
+        iframe { height: 720px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Moolah Public Hero Comparison</h1>
+      <p>
+        A is Floodlit Rivalry. B is Club Signal. C is Receipt of Glory.
+        Pick the one with the strongest first impression, then tell me what to borrow from the others.
+      </p>
+
+      <p>
+        D is the hybrid pass: C's structure, A's darker gold-red palette, and a little more of A's edge.
+      </p>
+
+      <section class="grid">
+        <article class="card">
+          <header><strong>Variant A</strong><span>Floodlit Rivalry</span></header>
+          <iframe src="./variant-a.html" title="Variant A"></iframe>
+        </article>
+        <article class="card">
+          <header><strong>Variant B</strong><span>Club Signal</span></header>
+          <iframe src="./variant-b.html" title="Variant B"></iframe>
+        </article>
+        <article class="card">
+          <header><strong>Variant C</strong><span>Receipt of Glory</span></header>
+          <iframe src="./variant-c.html" title="Variant C"></iframe>
+        </article>
+        <article class="card">
+          <header><strong>Variant D</strong><span>Hybrid: C + A</span></header>
+          <iframe src="./variant-d.html" title="Variant D"></iframe>
+        </article>
+      </section>
+    </main>
+  </body>
+  </html>

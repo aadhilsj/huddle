@@ -1,0 +1,121 @@
+.deck {
+  display: grid;
+  gap: 14px;
+}
+
+.deckHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: end;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.deckHeader h2 {
+  margin: 0;
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  line-height: 1.08;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.controls button,
+.tab,
+.tabActive {
+  min-height: 36px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(246, 241, 232, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.controls span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tabRail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tabActive {
+  border-color: rgba(212, 166, 58, 0.36);
+  background: rgba(212, 166, 58, 0.08);
+}
+
+.slideCard {
+  padding: 18px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(255, 255, 255, 0.03);
+}
+
+.slideLabel {
+  margin: 0 0 10px;
+  color: var(--gold);
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.slideCard h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.12;
+}
+
+.slideBody {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.pointList {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.pointList span {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+@media (max-width: 720px) {
+  .deckHeader {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .controls {
+    flex-wrap: wrap;
+  }
+}

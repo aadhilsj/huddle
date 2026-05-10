@@ -1,0 +1,282 @@
+.hero,
+.sectionBlock {
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.92fr);
+  gap: 18px;
+  align-items: start;
+  padding: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent),
+    #0f141b;
+}
+
+.heroCopy {
+  display: grid;
+  gap: 8px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.heroCopy h1,
+.sectionHeading h2,
+.requestCard h3 {
+  margin: 0;
+}
+
+.heroCopy h1 {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  line-height: 1.08;
+  max-width: 16ch;
+  text-transform: none;
+  font-weight: 800;
+}
+
+.heroBody,
+.heroNote,
+.requestMeta,
+.requestDetails,
+.emptyState {
+  line-height: 1.55;
+}
+
+.heroBody {
+  max-width: 46rem;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.heroNote {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.heroCard,
+.requestCard {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.heroCard {
+  padding: 16px;
+}
+
+.light {
+  background:
+    linear-gradient(135deg, rgba(212, 166, 58, 0.18), transparent 40%),
+    var(--paper);
+  color: var(--ink);
+}
+
+.detailLabel {
+  margin: 0 0 12px;
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.72;
+  font-weight: 700;
+}
+
+.detailValue {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.detailBody {
+  margin: 10px 0 0;
+  color: rgba(18, 20, 24, 0.72);
+}
+
+.sectionBlock {
+  padding: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent),
+    #0f141b;
+}
+
+.sectionHeading {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.sectionHeading h2 {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.15;
+  max-width: 20ch;
+  text-transform: none;
+  font-weight: 800;
+}
+
+.requestsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.requestCard {
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.015);
+  display: grid;
+  gap: 12px;
+  align-items: start;
+}
+
+.requestHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.requestGrid {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.9fr) minmax(0, 1.1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.requestSummary {
+  display: grid;
+  gap: 6px;
+}
+
+.summaryLine {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: baseline;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.summaryLine strong {
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
+.requestStatus {
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+}
+
+.requestMeta {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.requestDetails {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px 12px;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.requestDetails > div {
+  display: grid;
+  gap: 2px;
+}
+
+.requestDetails span {
+  color: var(--text);
+}
+
+.requestActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 2px;
+}
+
+.actionButton {
+  min-height: 30px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.actionButton:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.approveButton {
+  border-color: rgba(30, 107, 76, 0.45);
+  background: rgba(30, 107, 76, 0.14);
+}
+
+.requestDetails strong {
+  color: var(--text);
+}
+
+.emptyState {
+  padding: 18px;
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  color: var(--muted);
+}
+
+@media (max-width: 980px) {
+  .hero,
+  .requestsGrid,
+  .requestGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero,
+  .sectionBlock,
+  .heroCard,
+  .requestCard {
+    padding: 18px;
+  }
+
+  .heroCopy h1 {
+    font-size: 1.5rem;
+  }
+
+  .requestHeader {
+    flex-direction: column;
+  }
+
+  .requestDetails {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,1110 @@
+.shellSection,
+.hero,
+.section {
+  margin-top: 18px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  border-radius: 22px;
+}
+
+.hero {
+  padding: 28px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 12%, rgba(166, 58, 50, 0.34), transparent 18%),
+    radial-gradient(circle at 12% 88%, rgba(88, 101, 242, 0.16), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    #0f1623;
+}
+
+.heroArchive {
+  background:
+    radial-gradient(circle at 84% 10%, rgba(212, 166, 58, 0.24), transparent 18%),
+    radial-gradient(circle at 12% 88%, rgba(88, 101, 242, 0.14), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    #101723;
+}
+
+.heroNba {
+  background:
+    radial-gradient(circle at 86% 10%, rgba(166, 58, 50, 0.42), transparent 18%),
+    radial-gradient(circle at 8% 88%, rgba(88, 101, 242, 0.18), transparent 26%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    #121725;
+}
+
+.heroProfile {
+  background:
+    radial-gradient(circle at 86% 10%, rgba(30, 107, 76, 0.28), transparent 18%),
+    radial-gradient(circle at 12% 88%, rgba(212, 166, 58, 0.16), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    #111a22;
+}
+
+.heroOps {
+  background:
+    linear-gradient(90deg, rgba(83, 145, 255, 0.08), transparent 24%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 28px
+    ),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
+    #0d1219;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero h1,
+.section h2,
+.card h3,
+.railCard h3 {
+  margin: 0;
+}
+
+.hero h1,
+.section h2 {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.hero h1 {
+  font-size: clamp(2.3rem, 4vw, 3.7rem);
+  line-height: 1.08;
+  max-width: 14ch;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+.heroBody,
+.sectionBody,
+.card p,
+.railCard p,
+.factMeta {
+  line-height: 1.6;
+}
+
+.heroBody {
+  margin: 18px 0 0;
+  max-width: 42rem;
+  color: var(--muted);
+}
+
+.heroSplit {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(260px, 0.95fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.heroCopy {
+  display: grid;
+  align-content: start;
+}
+
+.heroVisual {
+  min-height: 280px;
+  border-radius: 24px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.heroVisual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroMeta {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.factCard,
+.card,
+.railCard,
+.tableCard,
+.glassPanel {
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(14px);
+}
+
+.factCard {
+  padding: 16px;
+  display: grid;
+  gap: 6px;
+}
+
+.factLabel {
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.factValue {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.section {
+  padding: 24px 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent),
+    #101722;
+}
+
+.sectionCompact {
+  padding: 20px 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent),
+    #101722;
+}
+
+.sectionHeading {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.section h2 {
+  font-size: clamp(1.55rem, 2.7vw, 2.35rem);
+  line-height: 1.14;
+  max-width: 20ch;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.sectionBody {
+  margin: 0;
+  max-width: 44rem;
+  color: var(--muted);
+}
+
+.grid3,
+.grid2 {
+  display: grid;
+  gap: 16px;
+}
+
+.grid3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card,
+.railCard,
+.tableCard,
+.glassPanel {
+  padding: 18px;
+}
+
+.card h3,
+.railCard h3 {
+  font-size: 1.25rem;
+  line-height: 1.18;
+  font-weight: 800;
+}
+
+.card p,
+.railCard p {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.statusBadge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(246, 241, 232, 0.1);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.statusActive {
+  color: #8fe0c0;
+}
+
+.statusDefunct {
+  color: #f1c27a;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.table td,
+.table th {
+  padding: 12px 0;
+  border-top: 1px solid rgba(246, 241, 232, 0.08);
+  text-align: left;
+}
+
+.table td:last-child,
+.table th:last-child {
+  text-align: right;
+}
+
+.rail {
+  display: grid;
+  gap: 14px;
+}
+
+.linkRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.stack {
+  display: grid;
+  gap: 16px;
+}
+
+.directory {
+  display: grid;
+  gap: 14px;
+}
+
+.directoryRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr) minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: start;
+  padding: 18px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(14px);
+}
+
+.directoryTitle {
+  display: grid;
+  gap: 8px;
+}
+
+.directoryTitle h3,
+.directoryMeta h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.16;
+  font-weight: 800;
+}
+
+.directoryTitle p,
+.directoryMeta p,
+.directoryBody {
+  margin: 0;
+  line-height: 1.58;
+  color: var(--muted);
+}
+
+.directoryMeta {
+  display: grid;
+  gap: 8px;
+}
+
+.directoryAction {
+  min-height: 42px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--text);
+  border: 1px solid rgba(246, 241, 232, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.miniGrid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.routeList {
+  display: grid;
+  gap: 10px;
+}
+
+.routeList a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.routeList a:hover {
+  color: var(--gold);
+}
+
+.linkButton {
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.92rem;
+  color: var(--text);
+  border: 1px solid rgba(246, 241, 232, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.archiveMap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.95fr);
+  gap: 18px;
+}
+
+.storyPanel,
+.routePanel,
+.opsPanel,
+.profilePanel {
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  border-radius: 18px;
+  padding: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(14px);
+}
+
+.storyPanel {
+  background:
+    radial-gradient(circle at 86% 18%, rgba(171, 61, 67, 0.24), transparent 22%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(255, 255, 255, 0.025);
+}
+
+.routePanel {
+  background:
+    radial-gradient(circle at 12% 12%, rgba(88, 101, 242, 0.18), transparent 20%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(255, 255, 255, 0.025);
+}
+
+.storyPanel h3,
+.routePanel h3,
+.opsPanel h3,
+.profilePanel h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.14;
+  font-weight: 800;
+}
+
+.storyPanel p,
+.routePanel p,
+.opsPanel p,
+.profilePanel p {
+  margin: 10px 0 0;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.storyPanel strong,
+.routePanel strong,
+.opsPanel strong,
+.profilePanel strong {
+  color: var(--text);
+}
+
+.sportStack {
+  display: grid;
+  gap: 14px;
+}
+
+.sportBand {
+  padding: 18px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  border-radius: 18px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(255, 255, 255, 0.025);
+}
+
+.sportBandNba {
+  background:
+    radial-gradient(circle at 92% 50%, rgba(183, 52, 61, 0.32), transparent 18%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(255, 255, 255, 0.025);
+}
+
+.sportBandF1 {
+  background:
+    radial-gradient(circle at 92% 50%, rgba(103, 122, 255, 0.28), transparent 18%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(255, 255, 255, 0.025);
+}
+
+.sportBandWorldCup {
+  background:
+    radial-gradient(circle at 92% 50%, rgba(28, 125, 88, 0.3), transparent 18%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(255, 255, 255, 0.025);
+}
+
+.sportBandHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.sportBandHeader h3 {
+  margin: 0;
+  font-size: 1.45rem;
+  line-height: 1.12;
+  font-weight: 800;
+}
+
+.sportBandHeader p,
+.sportBand p {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.factStrip {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.factChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.86rem;
+}
+
+.factChip strong {
+  color: var(--text);
+}
+
+.routeCluster {
+  display: grid;
+  gap: 12px;
+}
+
+.routeCluster a {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.routeCluster a span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.rivalrySnippet {
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(255, 255, 255, 0.025);
+}
+
+.rivalrySnippet h3,
+.rivalrySnippet p {
+  margin: 0;
+}
+
+.rivalrySnippet p:last-child {
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.58;
+}
+
+.archiveDoorCard {
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(255, 255, 255, 0.03);
+  text-decoration: none;
+  display: grid;
+  gap: 10px;
+}
+
+.archiveDoorCard h3,
+.archiveDoorCard p {
+  margin: 0;
+}
+
+.cardArrow {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.collapseCard {
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.collapseSummary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 20px;
+  cursor: pointer;
+}
+
+.collapseSummary::-webkit-details-marker {
+  display: none;
+}
+
+.collapseSummary h3 {
+  margin: 0;
+  font-size: 1.28rem;
+  font-weight: 800;
+}
+
+.collapseMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.collapseArrow {
+  color: var(--muted);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.collapseCard[open] .collapseArrow {
+  transform: rotate(45deg);
+}
+
+.collapseBody {
+  padding: 0 18px 18px;
+}
+
+.rivalryExplorer {
+  display: grid;
+  gap: 16px;
+}
+
+.lookupHeader {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+
+.lookupHeader h1 {
+  margin: 0;
+  font-family: var(--font-display), Impact, sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 0.94;
+}
+
+.lookupTitleRow {
+  display: flex;
+  align-items: end;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.lookupHint {
+  padding: 0;
+  border-radius: 0;
+  border: 0;
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  transform: translateY(-2px);
+}
+
+.rivalryControls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.rivalryField {
+  display: grid;
+  gap: 8px;
+}
+
+.rivalryField span {
+  color: var(--gold);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rivalryField select {
+  min-height: 48px;
+  width: 100%;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(246, 241, 232, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font: inherit;
+}
+
+.rivalryBoard {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  background:
+    radial-gradient(circle at 18% 16%, rgba(216, 178, 64, 0.12), transparent 26%),
+    radial-gradient(circle at 86% 18%, rgba(166, 58, 50, 0.18), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent),
+    rgba(255, 255, 255, 0.03);
+}
+
+.rivalryPrompt {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.rivalryPrompt p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.rivalryPromptMark {
+  color: var(--gold);
+  font-family: var(--font-display), Impact, sans-serif;
+  font-size: clamp(3rem, 10vw, 5rem);
+  line-height: 0.9;
+}
+
+.rivalryHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.rivalryTeamHeader {
+  display: grid;
+  gap: 2px;
+}
+
+.rivalryTeamHeader h3 {
+  margin: 0;
+  font-family: var(--font-body), sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.02;
+}
+
+.rivalryTeamHeaderLeft {
+  text-align: left;
+}
+
+.rivalryTeamHeaderRight {
+  text-align: right;
+}
+
+.rivalryCenterBadge {
+  align-self: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rivalryScoreboard {
+  display: grid;
+  place-items: center;
+}
+
+.rivalryScoreMain {
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+  font-size: clamp(3.2rem, 8vw, 5.2rem);
+  font-weight: 800;
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+  text-align: center;
+}
+
+.rivalrySplitBoard {
+  display: grid;
+  gap: 4px;
+}
+
+.rivalrySplitRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.rivalrySplitValue {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+}
+
+.rivalryMetricBoard {
+  display: grid;
+  gap: 6px;
+  border-top: 1px solid rgba(246, 241, 232, 0.08);
+  padding-top: 8px;
+}
+
+.rivalryMetricRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid rgba(246, 241, 232, 0.08);
+}
+
+.rivalryMetricRow:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.rivalryMetricLabel {
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.rivalryMetricValue {
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.rivalryMetricValueLeft {
+  color: #f5e0a2;
+  text-align: left;
+}
+
+.rivalryMetricValueRight {
+  color: #f7b0a2;
+  text-align: right;
+}
+
+.rivalryFootnote {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.seasonStrip {
+  display: grid;
+  gap: 12px;
+}
+
+.seasonRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) auto auto;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 16px;
+  border-top: 1px solid rgba(246, 241, 232, 0.08);
+}
+
+.seasonRow:first-child {
+  border-top: 0;
+}
+
+.seasonLabel {
+  display: grid;
+  gap: 6px;
+}
+
+.seasonLabel a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.seasonLabel p,
+.seasonMeta {
+  margin: 0;
+  color: var(--muted);
+}
+
+.seasonMeta {
+  font-size: 0.9rem;
+}
+
+.seasonRowLink {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) auto auto auto;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 16px;
+  border-top: 1px solid rgba(246, 241, 232, 0.08);
+  text-decoration: none;
+}
+
+.seasonRowLink:first-child {
+  border-top: 0;
+}
+
+.seasonRowLink:hover .seasonLabel span,
+.archiveDoorCard:hover h3 {
+  color: var(--gold);
+}
+
+.seasonLabel span {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.rowArrow {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.identityLedger {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 18px;
+}
+
+.profileHero {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 20px;
+  align-items: end;
+}
+
+.profilePortrait {
+  min-height: 220px;
+  border-radius: 26px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  background:
+    radial-gradient(circle at 50% 26%, rgba(255, 255, 255, 0.2), transparent 18%),
+    linear-gradient(180deg, rgba(64, 182, 132, 0.46), rgba(23, 52, 83, 0.9));
+  position: relative;
+  overflow: hidden;
+}
+
+.profilePortrait::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+}
+
+.franchiseRail {
+  display: grid;
+  gap: 12px;
+}
+
+.franchisePill {
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(255, 255, 255, 0.025);
+}
+
+.franchisePill p,
+.franchisePill h3 {
+  margin: 0;
+}
+
+.franchisePill p {
+  color: var(--muted);
+}
+
+.franchisePill h3 {
+  margin-top: 8px;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.ledgerCard {
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    rgba(255, 255, 255, 0.02);
+}
+
+.ledgerCard h3,
+.ledgerCard p {
+  margin: 0;
+}
+
+.ledgerCard p {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.opsBoard {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.opsCard {
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.018),
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px,
+      transparent 26px
+    ),
+    rgba(255, 255, 255, 0.02);
+}
+
+.opsCard h3,
+.opsCard p {
+  margin: 0;
+}
+
+.opsCard p {
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.taskList {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.taskRow {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  color: var(--muted);
+}
+
+.taskRow strong {
+  color: var(--text);
+}
+
+@media (max-width: 980px) {
+  .heroMeta,
+  .grid3,
+  .grid2,
+  .miniGrid,
+  .directoryRow {
+    grid-template-columns: 1fr;
+  }
+
+  .archiveMap,
+  .identityLedger,
+  .profileHero,
+  .opsBoard,
+  .heroSplit {
+    grid-template-columns: 1fr;
+  }
+
+  .seasonRow {
+    grid-template-columns: 1fr;
+  }
+
+  .seasonRowLink {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .rivalryControls {
+    grid-template-columns: 1fr;
+  }
+
+  .lookupTitleRow,
+  .rivalryHeader,
+  .rivalrySplitRow,
+  .rivalryMetricRow {
+    grid-template-columns: 1fr;
+  }
+
+  .lookupTitleRow {
+    align-items: start;
+  }
+
+  .rivalryTeamHeaderRight,
+  .rivalryMetricValueRight,
+  .rivalryMetricLabel {
+    text-align: left;
+  }
+
+  .directoryRow {
+    gap: 14px;
+  }
+}

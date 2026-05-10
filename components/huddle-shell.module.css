@@ -1,0 +1,338 @@
+.pageShell {
+  width: min(calc(100% - 32px), var(--max));
+  margin: 0 auto;
+  padding: 20px 0 56px;
+}
+
+.topbarWrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 0 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.brandBlock {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  text-decoration: none;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 2rem;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.globalNav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.backButton,
+.globalNavHome,
+.globalNavLink,
+.globalNavButton {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--muted);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.backButton {
+  gap: 6px;
+  opacity: 0.88;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.backButton:hover,
+.globalNavHome:hover,
+.globalNavLink:hover,
+.globalNavButton:hover {
+  color: var(--text);
+  opacity: 1;
+}
+
+.backButton svg,
+.globalNavHome svg {
+  width: 18px;
+  height: 18px;
+}
+
+.backButton span {
+  display: inline-block;
+}
+
+.globalNavButton[aria-expanded="true"] {
+  color: var(--text);
+}
+
+.modeTag,
+.sectionLabel,
+.navToggle,
+.headerAction {
+  display: none;
+}
+
+.modeTag {
+  text-transform: uppercase;
+}
+
+.topbarRight {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.authCluster {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.localNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.localNav a {
+  text-decoration: none;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.localNav a:visited {
+  color: #a79d8d;
+}
+
+.secondaryAction {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-decoration: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+}
+
+.secondaryAction:hover {
+  color: var(--text);
+}
+
+.authStatus {
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.localNav {
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.routeDrawer,
+.routeDrawerOpen {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 20;
+  overflow: hidden;
+  width: min(360px, calc(100vw - 48px));
+  border: 1px solid rgba(246, 241, 232, 0.08);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 88% 14%, rgba(88, 101, 242, 0.16), transparent 20%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+  transition:
+    max-height 220ms ease,
+    opacity 220ms ease,
+    padding 220ms ease,
+    transform 220ms ease;
+}
+
+.routeDrawer {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 18px;
+  transform: translateY(-8px);
+  pointer-events: none;
+}
+
+.routeDrawerOpen {
+  max-height: min(70vh, 760px);
+  opacity: 1;
+  padding: 10px 12px 12px;
+  transform: translateY(0);
+}
+
+.routeDrawerHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.routeDrawerEyebrow {
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.routeDrawerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  max-height: min(62vh, 680px);
+  overflow: auto;
+  padding-right: 2px;
+  align-items: start;
+  grid-auto-rows: min-content;
+}
+
+.routeDrawerSection {
+  display: grid;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  align-self: start;
+}
+
+.routeDrawerSection h2 {
+  margin: 0;
+  font-size: 0.64rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 0 2px;
+}
+
+.routeDrawerLinks {
+  display: grid;
+  gap: 6px;
+}
+
+.drawerLink,
+.drawerLinkActive {
+  display: flex;
+  align-items: flex-start;
+  min-height: 0;
+  padding: 8px 2px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 0.92rem;
+  letter-spacing: -0.01em;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.drawerLink {
+  color: var(--muted);
+  border: 0;
+  background: transparent;
+}
+
+.drawerLinkActive {
+  color: var(--text);
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+}
+
+.drawerLinkCopy {
+  display: grid;
+  gap: 0;
+}
+
+.drawerLinkCopy small {
+  color: var(--muted);
+  font-size: 0.6rem;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+
+.drawerLink:hover {
+  color: var(--text);
+  border-color: rgba(246, 241, 232, 0.12);
+}
+
+@media (max-width: 720px) {
+  .pageShell {
+    width: min(calc(100% - 24px), var(--max));
+    padding-top: 16px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .globalNav {
+    gap: 14px;
+  }
+
+  .topbarWrap {
+    margin-bottom: 16px;
+  }
+
+  .topbarRight,
+  .localNav,
+  .authCluster {
+    gap: 12px;
+  }
+
+  .routeDrawer,
+  .routeDrawerOpen {
+    left: 0;
+    right: 0;
+    width: auto;
+  }
+
+  .routeDrawerOpen {
+    padding: 14px;
+  }
+
+  .brand {
+    font-size: 1.75rem;
+  }
+}

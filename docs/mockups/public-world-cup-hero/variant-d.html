@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moolah Hero Variant D</title>
+    <style>
+      :root {
+        --bg: #0d1015;
+        --surface: #141920;
+        --surface-2: #1a2028;
+        --line: rgba(246, 241, 232, 0.14);
+        --text: #f6f1e8;
+        --muted: #c8c0b5;
+        --gold: #d4a63a;
+        --red: #a63a32;
+        --ink: #121418;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 82% 14%, rgba(212, 166, 58, 0.18), transparent 18%),
+          radial-gradient(circle at 16% 84%, rgba(166, 58, 50, 0.22), transparent 20%),
+          linear-gradient(180deg, rgba(255,255,255,0.03), transparent 20%),
+          linear-gradient(140deg, #080a0e 0%, #0d1015 46%, #181d25 100%);
+      }
+      .shell {
+        min-height: 100vh;
+        padding: 22px;
+        display: grid;
+        gap: 20px;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        font-family: system-ui, sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 18px;
+        align-items: stretch;
+      }
+      .left {
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 24px;
+        display: grid;
+        gap: 18px;
+        background:
+          linear-gradient(180deg, rgba(255,255,255,0.03), transparent),
+          linear-gradient(160deg, rgba(212,166,58,0.08), transparent 42%);
+        position: relative;
+        overflow: hidden;
+      }
+      .left::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(130deg, rgba(166,58,50,0.08), transparent 36%),
+          radial-gradient(circle at 82% 8%, rgba(212,166,58,0.16), transparent 20%);
+        pointer-events: none;
+      }
+      .eyebrow {
+        position: relative;
+        z-index: 1;
+        color: var(--gold);
+        font-size: 12px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-family: system-ui, sans-serif;
+      }
+      h1 {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        font-size: clamp(50px, 8vw, 118px);
+        line-height: 0.88;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+      }
+      .sub {
+        position: relative;
+        z-index: 1;
+        max-width: 560px;
+        font-family: system-ui, sans-serif;
+        font-size: 18px;
+        line-height: 1.5;
+        color: var(--muted);
+      }
+      .cta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .cta a {
+        min-height: 52px;
+        display: inline-flex;
+        align-items: center;
+        padding: 16px 22px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-family: system-ui, sans-serif;
+        font-weight: 700;
+      }
+      .cta .primary {
+        background: var(--gold);
+        color: var(--ink);
+      }
+      .cta .secondary {
+        border: 1px solid var(--line);
+        color: var(--text);
+      }
+      .proof-strip {
+        position: relative;
+        z-index: 1;
+        margin-top: 6px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .proof-strip div {
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-family: system-ui, sans-serif;
+        font-size: 13px;
+      }
+      .proof-strip strong {
+        display: block;
+        color: var(--text);
+        font-size: 20px;
+        margin-top: 4px;
+      }
+      .right {
+        display: grid;
+        gap: 14px;
+      }
+      .fixture, .card {
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+      }
+      .fixture {
+        background:
+          linear-gradient(180deg, rgba(255,255,255,0.03), transparent),
+          linear-gradient(180deg, rgba(166,58,50,0.12), transparent 24%),
+          var(--surface);
+        min-height: 340px;
+        padding: 20px;
+        display: grid;
+        align-content: start;
+        gap: 16px;
+      }
+      .fixture h2 {
+        margin: 0;
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .fixture table {
+        width: 100%;
+        border-collapse: collapse;
+        color: var(--muted);
+        font-family: system-ui, sans-serif;
+        font-size: 13px;
+      }
+      .fixture td {
+        padding: 10px 0;
+        border-top: 1px solid rgba(246,241,232,0.08);
+      }
+      .fixture td:last-child {
+        color: var(--text);
+        text-align: right;
+        font-weight: 700;
+      }
+      .card {
+        background:
+          linear-gradient(135deg, rgba(212,166,58,0.18), transparent 40%),
+          #f2ece2;
+        color: var(--ink);
+        padding: 18px;
+        display: grid;
+        gap: 10px;
+      }
+      .label {
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(18,20,24,0.56);
+        font-family: system-ui, sans-serif;
+      }
+      .value {
+        font-size: 30px;
+        line-height: 1;
+        font-weight: 800;
+        font-family: system-ui, sans-serif;
+      }
+      .small {
+        font-size: 14px;
+        line-height: 1.45;
+        color: rgba(18,20,24,0.72);
+        font-family: system-ui, sans-serif;
+      }
+      @media (max-width: 920px) {
+        .hero { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 560px) {
+        .shell { padding: 16px; }
+        .left { padding: 18px; }
+        .proof-strip { grid-template-columns: 1fr; }
+        h1 { font-size: clamp(44px, 15vw, 78px); }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="nav">
+        <div>Moolah</div>
+        <div>2026 World Cup Campaign</div>
+      </header>
+
+      <section class="hero">
+        <div class="left">
+          <div class="eyebrow">One tournament. Real stakes. A club that keeps going.</div>
+          <h1>Win Here.<br />Belong Longer.</h1>
+          <div class="sub">
+            Join a paid World Cup competition with real rivalry, real banter, and a social layer
+            that actually lives after kickoff. Clear entry. Clear stakes. A stronger club underneath.
+          </div>
+          <div class="cta">
+            <a class="primary" href="#">Enter the World Cup</a>
+            <a class="secondary" href="#">See how Moolah works</a>
+          </div>
+          <div class="proof-strip">
+            <div>Format<strong>Paid + social</strong></div>
+            <div>Energy<strong>Live Discord banter</strong></div>
+            <div>Future<strong>Club identity</strong></div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="fixture">
+            <h2>What you join</h2>
+            <table>
+              <tr><td>Competition entry</td><td>Open now</td></tr>
+              <tr><td>Discord access</td><td>Guided onboarding</td></tr>
+              <tr><td>Club status</td><td>Starts building here</td></tr>
+              <tr><td>Next-step leagues</td><td>Built in</td></tr>
+            </table>
+          </div>
+          <div class="card">
+            <div class="label">Club Signal</div>
+            <div class="value">Colombo + Oslo</div>
+            <div class="small">Structured enough to feel legitimate, dark and hot enough to still feel alive.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  </html>
