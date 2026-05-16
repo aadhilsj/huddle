@@ -12,7 +12,7 @@ export default function HomePage() {
       <section className={styles.hero} id="join">
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>Huddle FIFA World Cup Fantasy League</p>
-          <h1>Join something that feels alive.</h1>
+          <h1>Join the FIFA World Cup.</h1>
           <p className={styles.heroBody}>
             Start with one World Cup league. Stay for the banter, the rivalry, and the kind of room
             that gives people a reason to talk every day again.
