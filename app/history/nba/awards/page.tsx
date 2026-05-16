@@ -35,8 +35,7 @@ export default function NbaAwardsPage() {
         <p className={styles.eyebrow}>Awards system</p>
         <h1>Season memory is never just the trophy.</h1>
         <p className={styles.heroBody}>
-          Season 1 already proves the split: title outcomes, player outcomes, GM judgments, and tone awards all
-          tell different truths about the same year.
+          Season 1 already proves the split: title outcomes, player outcomes, GM judgments, and tone awards all tell different truths about the same year.
         </p>
       </section>
 

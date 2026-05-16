@@ -13,7 +13,7 @@ export default function MemberArchiveDirectoryPage() {
     <HuddleShell mode="member" primaryAction={{ href: "/history/members", label: "Members" }}>
       <section className={`${styles.hero} ${styles.heroProfile}`}>
         <p className={styles.eyebrow}>Member directory</p>
-        <h1>People need receipts, not just team pages.</h1>
+        <h1>People need receipts, not just rosters.</h1>
         <p className={styles.heroBody}>
           The franchise layer matters, but the club also remembers who won the room, who got unlucky, and who built a reputation that survives the season.
         </p>
@@ -22,7 +22,7 @@ export default function MemberArchiveDirectoryPage() {
       <section className={styles.section}>
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>Profiles</p>
-          <h2>The archive should hold people-level law too.</h2>
+          <h2>The archive should hold people-level memory too.</h2>
         </div>
         <div className={styles.directory}>
           {sampleMembers.map((member) => (

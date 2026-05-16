@@ -12,11 +12,10 @@ export default function HomePage() {
       <section className={styles.hero} id="join">
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>Huddle FIFA World Cup Fantasy League</p>
-          <h1>Join the FIFA World Cup.</h1>
+          <h1>Join something that feels alive.</h1>
           <p className={styles.heroBody}>
-            A private FIFA World Cup fantasy league where you build a team, follow every
-            match a little more closely, and experience the tournament with the people in
-            your league.
+            Start with one World Cup league. Stay for the banter, the rivalry, and the kind of room
+            that gives people a reason to talk every day again.
           </p>
           <div className={styles.ctaRow}>
             <Link href="/join" className={`${styles.button} ${styles.primary}`}>
@@ -27,7 +26,7 @@ export default function HomePage() {
             </a>
           </div>
           <p className={styles.heroNote}>
-            One tournament first. Then the room around it, and whatever comes next.
+            Competition is the wedge. Community is the point.
           </p>
         </div>
 
@@ -70,18 +69,18 @@ export default function HomePage() {
         <div className={styles.threeGrid}>
           <article>
             <span>01</span>
-            <h3>Join the league</h3>
-            <p>Claim your place in the Huddle FIFA World Cup Fantasy League.</p>
+            <h3>Join the competition</h3>
+            <p>Claim your place in the World Cup league and give the tournament some stakes.</p>
           </article>
           <article>
             <span>02</span>
-            <h3>Enter the chat</h3>
-            <p>Get into the Discord and settle in before the tournament properly begins.</p>
+            <h3>Enter the room</h3>
+            <p>Move into the Discord where the banter, receipts, and daily rhythm actually live.</p>
           </article>
           <article>
             <span>03</span>
-            <h3>Make the tournament matter</h3>
-            <p>Follow every match a little more closely, and leave with a reason to return.</p>
+            <h3>Make it matter</h3>
+            <p>Follow every match more closely and leave with people, history, and a reason to come back.</p>
           </article>
         </div>
       </section>
@@ -89,24 +88,23 @@ export default function HomePage() {
       <section className={styles.sectionBlock}>
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>Why this feels different</p>
-          <h2>Not fantasy in a vacuum.</h2>
+          <h2>Not a fantasy platform.</h2>
           <p className={styles.sectionBody}>
-            The format is familiar. The feeling is not. It has somewhere to live once the teams
-            are set.
+            The league is only the way in. Huddle is the world that forms around it.
           </p>
         </div>
         <div className={styles.threeGrid}>
           <article>
-            <h3>A room, not just a table</h3>
-            <p>Most fantasy leagues live inside an app and end there. This one has somewhere to return to.</p>
+            <h3>Belonging</h3>
+            <p>It gives people a place to return to, not just a table that disappears when the scores stop moving.</p>
           </article>
           <article>
-            <h3>The tournament sharpens</h3>
-            <p>Every match carries a little more weight when the league is live and everyone is watching.</p>
+            <h3>Banter</h3>
+            <p>Competition gives people a reason to talk. Trash talk turns into real talk if the room is worth staying in.</p>
           </article>
           <article>
-            <h3>It does not end at one tournament</h3>
-            <p>The World Cup is the first entry point, not the only one.</p>
+            <h3>Glory</h3>
+            <p>Titles, records, promotions, and receipts are what turn one season into something people remember.</p>
           </article>
         </div>
       </section>
@@ -116,12 +114,12 @@ export default function HomePage() {
           <p className={styles.eyebrow}>Why this works</p>
           <h2>Built on six seasons of proof.</h2>
           <p className={styles.sectionBody}>
-            The pattern is already real: people return, recruit their friends, care about fairness, and turn a season into something with memory.
+            The pattern is already there: people return, bring their people in, and turn a season into shared history.
           </p>
         </div>
         <div className={styles.proofLayout}>
           <div className={styles.proofQuote}>
-            <p>It stopped being just a league a long time ago.</p>
+            <p>People join for one competition. They stay for a world.</p>
           </div>
           <div className={styles.proofStats}>
             <article>
@@ -131,13 +129,13 @@ export default function HomePage() {
             </article>
             <article>
               <span>Pull</span>
-              <strong>Members bring the next members in.</strong>
+              <strong>The room recruits the next room.</strong>
               <p>Roughly twenty to thirty of around forty-five current NBA and F1 participants came through existing-member pull, not cold acquisition.</p>
             </article>
             <article>
               <span>Reality</span>
-              <strong>The Discord becomes real life chat.</strong>
-              <p>During the season, it becomes the most active chat in many members’ actual lives. That is the standard this World Cup is entering.</p>
+              <strong>The chat becomes part of real life.</strong>
+              <p>During the season, it becomes one of the most active chats in many members’ actual lives. That is the standard this World Cup is entering.</p>
             </article>
           </div>
         </div>
@@ -146,7 +144,7 @@ export default function HomePage() {
       <section className={styles.footerCta}>
         <div className={styles.footerCtaHeading}>
           <p className={styles.eyebrow}>Ready?</p>
-          <h2>Join the FIFA World Cup. See if you come back.</h2>
+          <h2>Start with the World Cup. Stay if the room feels right.</h2>
         </div>
         <div className={styles.ctaRow}>
           <Link href="/join" className={`${styles.button} ${styles.primary}`}>

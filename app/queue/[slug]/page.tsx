@@ -35,7 +35,7 @@ export default async function LeagueQueuePage({ params, searchParams }: QueuePag
             <p className={styles.eyebrow}>Queue</p>
             <h1>That queue is not open here.</h1>
             <p className={styles.heroBody}>
-              NBA, F1, and WNBA use queue capture. FIFA World Cup goes through the live join flow instead.
+              NBA, F1, and WNBA use queue capture. FIFA World Cup goes through the live join route instead.
             </p>
           </div>
         </section>
@@ -52,7 +52,7 @@ export default async function LeagueQueuePage({ params, searchParams }: QueuePag
           <p className={styles.eyebrow}>Next season queue</p>
           <h1>{league.shortLabel}</h1>
           <p className={styles.heroBody}>
-            This is not the live intake. It is the interest list for the next season so Huddle can track who wants in before the league opens.
+            This is not the live intake. It is the early line for the next season, so Huddle can see demand before the league opens.
           </p>
           <div className={styles.metaStrip}>
             <div>
@@ -95,7 +95,7 @@ export default async function LeagueQueuePage({ params, searchParams }: QueuePag
                 </div>
               </div>
               <p className={styles.fieldHelp}>
-                This puts you on the early queue for next season. Huddle can use it to gauge demand and contact you when the league opens.
+                This puts you on the early queue for next season. Huddle can use it to gauge demand and call the right people in first.
               </p>
               <button type="submit" className={styles.submitButton}>
                 {league.slug === "f1" ? "Join the queue" : "Reserve your spot"}

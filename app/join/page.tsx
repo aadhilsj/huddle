@@ -37,13 +37,13 @@ export default async function JoinPage({ searchParams }: JoinPageProps) {
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>Join Huddle</p>
-          <h1>Claim your place properly.</h1>
+          <h1>Claim your place in the room.</h1>
           <p className={styles.heroBody}>
-            This is the clean start. Put your name down for the{" "}
-            {joinFlowData.competitionName}, and Huddle will carry you into the right next step.
+            Put your name down for the {joinFlowData.competitionName}, and Huddle will move you from
+            entry to inside without losing the thread.
           </p>
           <p className={styles.heroNote}>
-            {joinFlowData.entryCountLabel}. One clean entry now, then the room around it.
+            {joinFlowData.entryCountLabel}. One competition first, then the world around it.
           </p>
           <div className={styles.metaStrip}>
             <div>
@@ -56,7 +56,7 @@ export default async function JoinPage({ searchParams }: JoinPageProps) {
             </div>
             <div>
               Flow
-              <strong>Join, then guided inside</strong>
+              <strong>Enter, then move inside</strong>
             </div>
           </div>
         </div>
@@ -89,7 +89,7 @@ export default async function JoinPage({ searchParams }: JoinPageProps) {
               </div>
 
               <p className={styles.fieldHelp}>
-                This saves your place and gives Huddle the context to move you cleanly into the next step.
+                This saves your place so Huddle can carry the right context into the next step.
               </p>
 
               <button type="submit" className={styles.submitButton}>
@@ -100,9 +100,9 @@ export default async function JoinPage({ searchParams }: JoinPageProps) {
 
           <div className={styles.lightCard}>
             <p className={styles.cardLabel}>Right now</p>
-            <strong>You are not paying yet</strong>
+            <strong>No payment yet</strong>
             <p>
-              This is the first clean intake step. Payment and onboarding can slot in after the core flow is stable.
+              This step is about entry, not checkout. Payment and onboarding follow after your place is saved.
             </p>
           </div>
         </aside>
@@ -111,23 +111,23 @@ export default async function JoinPage({ searchParams }: JoinPageProps) {
       <section className={styles.sectionBlock} id="what-happens">
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>What happens</p>
-          <h2>Three clean steps from interest to entry.</h2>
+          <h2>Three steps from interest to inside.</h2>
         </div>
         <div className={styles.panelGrid}>
           <article className={styles.panel}>
             <span>01</span>
-            <h3>Save the request</h3>
-            <p>Your details land in the system tied to the current competition, not in a forgotten form.</p>
+            <h3>Save your place</h3>
+            <p>Your request lands against the live competition, not in a form that goes nowhere.</p>
           </article>
           <article className={styles.panel}>
             <span>02</span>
-            <h3>Confirm the route</h3>
-            <p>From there, Huddle can point you into payment, onboarding, or the next manual check without confusion.</p>
+            <h3>Get routed properly</h3>
+            <p>From there, Huddle can move you into payment, onboarding, or founder review without losing momentum.</p>
           </article>
           <article className={styles.panel}>
             <span>03</span>
             <h3>Arrive inside</h3>
-            <p>The destination is still the same: league, room, and a place that already feels intentional.</p>
+            <p>The destination is the same every time: the league, the room, and a place worth returning to.</p>
           </article>
         </div>
       </section>
@@ -135,9 +135,9 @@ export default async function JoinPage({ searchParams }: JoinPageProps) {
       <section className={styles.sectionBlock} id="inside">
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>Inside Huddle</p>
-          <h2>The point is still the room around the tournament.</h2>
+          <h2>The tournament is the wedge. The room is the product.</h2>
           <p className={styles.sectionBody}>
-            The intake should feel clean because the club should feel clean. No dead-end forms, no fog, no vague next step.
+            The join flow should feel clear because the club should feel clear. No fog, no drift, no dead-end handoff.
           </p>
         </div>
         <div className={styles.listLayout}>
@@ -145,7 +145,7 @@ export default async function JoinPage({ searchParams }: JoinPageProps) {
             <span>North star</span>
             <strong>Make community easy.</strong>
             <p>
-              Even the join flow should do that. It should lower friction, preserve context, and hand people into something real.
+              Even this page should do that. Lower friction, hold context, and hand people into something real.
             </p>
           </div>
           <div className={styles.checklist}>
@@ -155,11 +155,11 @@ export default async function JoinPage({ searchParams }: JoinPageProps) {
             </article>
             <article>
               <strong>Community is still the product</strong>
-              <p>The league matters, but the point is what gathers around it once people arrive.</p>
+              <p>The league matters because it gives people a reason to gather again.</p>
             </article>
             <article>
-              <strong>The stack is getting real</strong>
-              <p>This request now lands in the database instead of disappearing into a mockup-only flow.</p>
+              <strong>The flow is now real</strong>
+              <p>This request lands in the product, not in a mockup pretending to be one.</p>
             </article>
           </div>
         </div>

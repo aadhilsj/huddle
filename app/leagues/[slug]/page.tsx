@@ -73,7 +73,7 @@ export default async function PublicLeaguePage({
             <p className={styles.cardLabel}>League shape</p>
             <strong>{league.teamsLine}</strong>
             <p>
-              Public-facing description first. Full club depth sits behind archive, profile, and member routes.
+              Public explanation first. The deeper layers live in archive, profile, and member routes.
             </p>
           </article>
         </aside>
@@ -82,7 +82,7 @@ export default async function PublicLeaguePage({
       <section className={styles.section}>
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>{league.rankingHeading}</p>
-          <h2>Public ranking signal.</h2>
+          <h2>Public signal.</h2>
         </div>
         <div className={styles.rankings}>
           {league.rankingRows.map((row) => (

@@ -26,8 +26,7 @@ export default async function JoinSuccessPage({ searchParams }: SuccessPageProps
           <p className={styles.eyebrow}>Request received</p>
           <h1>Your place is saved.</h1>
           <p className={styles.heroBody}>
-            You are now in the system for the {joinFlowData.competitionName}. The point from here is simple:
-            carry you into the next step without losing the thread.
+            You are now in the system for the {joinFlowData.competitionName}. From here, Huddle should move you forward without losing the thread.
           </p>
           <div className={styles.ctaRow}>
             <Link
@@ -41,7 +40,7 @@ export default async function JoinSuccessPage({ searchParams }: SuccessPageProps
             </Link>
           </div>
           <p className={styles.heroNote}>
-            This flow is not pretending to be complete yet. It is now connected to the database and ready for payment and onboarding to slot in next.
+            The route is real now. Payment and onboarding can attach to this instead of being stitched on later.
           </p>
         </div>
 
@@ -62,21 +61,21 @@ export default async function JoinSuccessPage({ searchParams }: SuccessPageProps
       <section className={styles.sectionBlock} id="next">
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>What happens next</p>
-          <h2>The flow is now real enough to build on.</h2>
+          <h2>The next layers can build on this.</h2>
           <p className={styles.sectionBody}>
-            This request is no longer just a design artifact. It now lands in the database with competition context attached.
+            This request now lands with competition context attached, which means the rest of the journey can be carried properly.
           </p>
         </div>
         <div className={styles.grid}>
           <article className={styles.panel}>
             <span>01</span>
             <strong>Join request saved</strong>
-            <p>Your interest now exists as a real row the product can act on later.</p>
+            <p>Your entry now exists as a real record the product can move on.</p>
           </article>
           <article className={styles.panel}>
             <span>02</span>
             <strong>Payment can slot in next</strong>
-            <p>The next layer is attaching checkout and confirmation to the same flow instead of inventing it from scratch.</p>
+            <p>The next layer is attaching checkout and confirmation to the same journey, not inventing a new one.</p>
           </article>
           <article className={styles.panel}>
             <span>03</span>

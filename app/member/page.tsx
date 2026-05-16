@@ -24,18 +24,18 @@ export default async function MemberPage({ searchParams }: MemberPageProps) {
           <p className={styles.eyebrow}>Member foyer</p>
           <h1><MemberGreeting fallbackName={memberData.memberName} /></h1>
           <p className={styles.arrivalBody}>
-            Your place is set. This is your way back in.
+            Your place is set. This is your way back into the club.
           </p>
           <div className={styles.arrivalActions}>
             <a className={`${styles.button} ${styles.primary}`} href="#status">
               View your status
             </a>
             <a className={`${styles.button} ${styles.secondary}`} href="/discord">
-              Discord step
+              Discord
             </a>
           </div>
           <p className={styles.arrivalNote}>
-            {memberData.entryCountLabel}. Early still helps.
+            {memberData.entryCountLabel}. The room gets better when more of the right people are in.
           </p>
         </div>
 
@@ -82,17 +82,17 @@ export default async function MemberPage({ searchParams }: MemberPageProps) {
           <article className={styles.statusCard}>
             <span>League</span>
             <strong>{memberData.competitionShortName}</strong>
-            <p>Your current competition and the room around it.</p>
+            <p>Your current competition and the world gathering around it.</p>
           </article>
           <article className={styles.statusCard}>
             <span>Community</span>
             <strong>{memberData.communityStatus}</strong>
-            <p>Whether the social layer is still pending or properly linked.</p>
+            <p>Whether you are still on the way in or properly inside.</p>
           </article>
           <article className={styles.statusCard}>
             <span>Payment</span>
             <strong>{memberData.paymentStatus}</strong>
-            <p>The entry state attached to this member record.</p>
+            <p>The payment state attached to your entry.</p>
           </article>
         </div>
       </section>
@@ -116,7 +116,7 @@ export default async function MemberPage({ searchParams }: MemberPageProps) {
           <article className={styles.actionCard}>
             <span>03</span>
             <h3>Later</h3>
-            <p>{memberData.whatComesLater} is where this starts to become memory instead of just flow.</p>
+            <p>{memberData.whatComesLater} is where this stops being a flow and starts becoming memory.</p>
           </article>
         </div>
       </section>
@@ -126,21 +126,20 @@ export default async function MemberPage({ searchParams }: MemberPageProps) {
           <p className={styles.eyebrow}>Inside Huddle</p>
           <h2>What builds from here</h2>
           <p className={styles.sectionBody}>
-            Right now, you have the league, the room around it, and a place to return to.
-            Later, it grows into profile, history, and something that starts to feel earned.
+            Right now, you have the league, the room around it, and a place to return to. Later, that grows into profile, history, rivalry, and identity.
           </p>
         </div>
         <div className={styles.insideLayout}>
           <div className={styles.insideList}>
             <article>
               <span>Now</span>
-              <strong>League + room + orientation</strong>
-              <p>Enough to know where you are and why you would come back.</p>
+              <strong>League + room + rhythm</strong>
+              <p>Enough to know where you are, who is around you, and why you would come back.</p>
             </article>
             <article>
               <span>Later</span>
-              <strong>Profile + history + more leagues</strong>
-              <p>The deeper parts arrive as the club gathers weight.</p>
+              <strong>Profile + history + more worlds</strong>
+              <p>The deeper layers arrive as the club gathers weight.</p>
             </article>
           </div>
         </div>

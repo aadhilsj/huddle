@@ -95,10 +95,9 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>Checkout</p>
-          <h1>Local price on screen. PayHere underneath.</h1>
+          <h1>Local price up front. Gateway underneath.</h1>
           <p className={styles.heroBody}>
-            Huddle stores the base price in LKR, detects where the visitor is coming from, and shows
-            the entry in a familiar currency before handing payment off to PayHere.
+            Huddle keeps one base price in LKR, shows the amount in a familiar currency, and only hands off for the charge itself.
           </p>
           {checkoutError ? <p className={styles.heroNote}>{checkoutError}</p> : null}
 
@@ -126,6 +125,7 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
             {payHereForm.ready
               ? `Displayed in ${pricing.displayCurrency}. Final gateway charge is ${formatMoney(pricing.settlementAmount, pricing.settlementCurrency)} via PayHere.`
               : "This page still needs PayHere credentials and a saved join request before it can hand off to live checkout."}
+              
           </p>
         </div>
 
@@ -162,7 +162,7 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
             <p className={styles.cardLabel}>Why this structure</p>
             <strong>One source price. Local display.</strong>
             <p className={styles.lightBody}>
-              Huddle keeps pricing anchored in LKR, converts for clarity, and still settles through a Sri Lankan gateway.
+              One source price keeps the business simple. Local display keeps the visitor oriented.
             </p>
           </div>
         </aside>
@@ -171,16 +171,16 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
       <section className={styles.sectionBlock} id="what-happens">
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>What happens</p>
-          <h2>PayHere now owns the payment handoff.</h2>
+          <h2>PayHere only owns the charge.</h2>
           <p className={styles.sectionBody}>
-            Huddle still owns the member state before and after the payment. PayHere only owns the gateway step.
+            Huddle still owns the member state before and after payment. PayHere only owns the gateway moment.
           </p>
         </div>
         <div className={styles.grid}>
           <article className={styles.infoCard}>
             <span>01</span>
             <h3>Join request already exists</h3>
-            <p>The intake is saved before payment starts, so the app already knows who is trying to enter.</p>
+            <p>The intake is saved before payment starts, so Huddle already knows who is trying to enter.</p>
           </article>
           <article className={styles.infoCard}>
             <span>02</span>
@@ -198,9 +198,9 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
       <section className={styles.sectionBlock} id="why">
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>Multi-currency</p>
-          <h2>Clarity for the visitor, simplicity for the business.</h2>
+          <h2>Clarity for the visitor. Simplicity for the club.</h2>
           <p className={styles.sectionBody}>
-            The visitor sees an amount in a currency they recognise. The business still keeps one base price and one gateway integration path.
+            The visitor sees an amount in a currency they recognise. Huddle still keeps one price logic underneath.
           </p>
         </div>
       </section>

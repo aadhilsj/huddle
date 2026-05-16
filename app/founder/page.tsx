@@ -12,9 +12,9 @@ export default async function FounderPage() {
         <section className={styles.hero} id="overview">
           <div className={styles.heroCopy}>
             <p className={styles.eyebrow}>Founder view</p>
-            <h1>Overview</h1>
+            <h1>Read the room.</h1>
             <p className={styles.heroBody}>
-              Core operating view for entry volume, density, and onboarding health.
+              Operating view for entry volume, member quality, and whether the room is actually holding together.
             </p>
             <p className={styles.heroNote}>
               Last updated {founderData.updatedAt}. Snapshot view, not live noise.
@@ -25,7 +25,7 @@ export default async function FounderPage() {
             <div className={`${styles.heroCard} ${styles.light}`}>
               <p className={styles.detailLabel}>Current focus</p>
               <p className={styles.detailValue}>{founderData.focus}</p>
-              <p className={styles.detailBody}>Traffic matters less than repeat density.</p>
+              <p className={styles.detailBody}>Traffic matters less than who comes back and who brings people with them.</p>
             </div>
           </aside>
         </section>
@@ -43,7 +43,7 @@ export default async function FounderPage() {
         <section className={styles.sectionBlock} id="health">
           <div className={styles.sectionHeading}>
             <p className={styles.eyebrow}>Health</p>
-            <h2>This week</h2>
+            <h2>This week’s shape</h2>
           </div>
           <div className={styles.healthGrid}>
             <article className={`${styles.panel} ${styles.dark}`}>
@@ -89,7 +89,7 @@ export default async function FounderPage() {
           <div className={styles.signalGrid}>
             <article className={styles.signalCard}>
               <span>Member quality</span>
-              <strong>Are the right people joining?</strong>
+              <strong>Are the right people entering?</strong>
             </article>
             <article className={styles.signalCard}>
               <span>Conversation quality</span>
@@ -97,7 +97,7 @@ export default async function FounderPage() {
             </article>
             <article className={styles.signalCard}>
               <span>Return potential</span>
-              <strong>Would they come back?</strong>
+              <strong>Would they come back for the next world?</strong>
             </article>
           </div>
         </section>
@@ -114,7 +114,7 @@ export default async function FounderPage() {
             </article>
             <article>
               <h3>Keep</h3>
-              <p>The landing page and onboarding feel coherent enough. Do not overcomplicate them yet.</p>
+              <p>The public route and onboarding feel coherent enough. Do not decorate them into confusion.</p>
             </article>
             <article>
               <h3>Question</h3>

@@ -39,7 +39,7 @@ export function getPublicLeagueSummaries(): PublicLeagueSummary[] {
       shortLabel: "FIFA World Cup",
       cardLabel: "FIFA World Cup",
       eyebrow: "Public now",
-      summary: "The current public entry point: tournament fantasy, guided onboarding, and a room that continues after kickoff.",
+      summary: "The current public way in: one World Cup league, guided onboarding, and a room that keeps going after kickoff.",
       route: "/leagues/world-cup",
       status: "Open intake",
       entryFee: "TBA",
@@ -53,8 +53,8 @@ export function getPublicLeagueSummaries(): PublicLeagueSummary[] {
       ctaHref: "/join",
       mechanics: [
         "Pick a tournament team and follow every match closer.",
-        "Enter through one clean intake instead of a scattered chat flow.",
-        "Move into the Discord and whatever league comes after this one."
+        "Enter through one clear intake instead of a scattered chat flow.",
+        "Move into the Discord and whatever world comes after this one."
       ],
       rankingHeading: "Public board",
       rankingRows: [
@@ -113,7 +113,7 @@ export function getPublicLeagueSummaries(): PublicLeagueSummary[] {
       shortLabel: "F1 Fantasy League",
       cardLabel: "F1 Fantasy League",
       eyebrow: "Cross-sport world",
-      summary: "The second serious sport world. Built to carry driver tables, constructors, and a second franchise identity for members.",
+      summary: "The second serious sport world. Built to carry driver tables, constructors, and a second identity for members.",
       route: "/leagues/f1",
       status: "Planned",
       entryFee: "TBA",

@@ -66,7 +66,7 @@ export default function NbaHistoryPage() {
       <section className={styles.section}>
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>Season directory</p>
-          <h2>Open a season when you need it.</h2>
+          <h2>Open a season when you need the receipts.</h2>
         </div>
         <div className={styles.stack}>
           {seasonGroups.map((group) => (
@@ -109,7 +109,7 @@ export default function NbaHistoryPage() {
       <section className={styles.sectionCompact}>
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>Archive model</p>
-          <h2>What belongs here.</h2>
+          <h2>What belongs in the permanent record.</h2>
         </div>
         <div className={styles.grid3}>
           {data.archiveModules.map((module) => (

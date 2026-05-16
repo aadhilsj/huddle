@@ -67,14 +67,12 @@ export default function LoginPage() {
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>Login</p>
-          <h1>Use the code. Get inside.</h1>
+          <h1>Get back inside.</h1>
           <p className={styles.heroBody}>
-            Huddle login should stay simple. Enter your email, receive a one-time code, and sign in
-            without inventing another password to forget.
+            Huddle login stays light. Enter your email, take the code, and get back to the room without another password to remember.
           </p>
           <p className={styles.heroNote}>
-            Founders and members both use the same entry point. The role layer decides what they can
-            see once they are in.
+            Founders and members enter through the same door. Your role decides what opens after that.
           </p>
         </div>
 
@@ -108,7 +106,7 @@ export default function LoginPage() {
                   />
                 </div>
                 <p className={styles.fieldHelp}>
-                  Your Supabase email template must be configured to send a numeric OTP instead of a magic link.
+                  This flow expects a numeric code, not a magic link.
                 </p>
                 <button className={styles.button} disabled={working} type="submit">
                   {working ? "Sending code..." : "Send code"}
@@ -166,6 +164,7 @@ export default function LoginPage() {
                 </>
               ) : (
                 "No session yet. Request a code and come in properly."
+                
               )}
             </p>
           </div>

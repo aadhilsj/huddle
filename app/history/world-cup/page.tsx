@@ -6,9 +6,9 @@ export default function WorldCupHistoryPage() {
     <HuddleShell mode="member" primaryAction={{ href: "/history/world-cup", label: "World Cup archive" }}>
       <section className={`${styles.hero} ${styles.heroArchive}`}>
         <p className={styles.eyebrow}>World Cup archive</p>
-        <h1>The campaign should eventually become memory too.</h1>
+        <h1>The campaign should become memory, not disappear.</h1>
         <p className={styles.heroBody}>
-          The World Cup starts as the wedge, but it should not vanish afterward. It should become one more chapter in the club’s archive once the campaign turns into history.
+          The World Cup starts as the wedge, but it should not vanish afterward. It should become another chapter in the club once the tournament turns into history.
         </p>
         <div className={styles.heroMeta}>
           <div className={styles.factCard}>
@@ -33,9 +33,9 @@ export default function WorldCupHistoryPage() {
       <section className={styles.section}>
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>What it becomes</p>
-          <h2>Not just a campaign page that disappears.</h2>
+          <h2>Not just a funnel that expires.</h2>
           <p className={styles.sectionBody}>
-            This route is where the temporary funnel eventually becomes a permanent part of club memory: entrants, winners, awards, and what the tournament changed afterward.
+            This is where the temporary campaign becomes permanent club memory: entrants, winners, awards, and what changed after the tournament ended.
           </p>
         </div>
       </section>

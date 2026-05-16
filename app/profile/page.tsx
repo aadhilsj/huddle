@@ -42,9 +42,9 @@ export default function ProfilePage() {
       <section className={styles.section}>
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>Current franchises</p>
-          <h2>One profile should hold more than one sport.</h2>
+          <h2>One profile should hold more than one world.</h2>
           <p className={styles.sectionBody}>
-            NBA and F1 should both be visible here when they exist. The profile should understand one person as one club identity, not one row per sport.
+            NBA and F1 should both be visible here when they exist. One person should read as one club identity, not one row per sport.
           </p>
         </div>
         <div className={styles.franchiseRail}>
@@ -61,7 +61,7 @@ export default function ProfilePage() {
       <section className={styles.section}>
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>Identity ledger</p>
-          <h2>The deep stats belong to a person too.</h2>
+          <h2>The receipts belong to a person too.</h2>
         </div>
         <div className={styles.identityLedger}>
           {data.identityLedger.map((item) => (
@@ -77,7 +77,7 @@ export default function ProfilePage() {
       <section className={styles.sectionCompact}>
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>Route map</p>
-          <h2>The profile should connect back into the wider archive.</h2>
+          <h2>The profile should connect back into the wider world.</h2>
         </div>
         <div className={styles.miniGrid}>
           <article className={styles.card}>

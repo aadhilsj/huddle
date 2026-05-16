@@ -21,7 +21,7 @@ type DiscordState = {
 
 const fallbackState: DiscordState = {
   competitionShortName: "Huddle league",
-  detail: "Sign in first, then Huddle can tell you what the Discord step looks like.",
+  detail: "Sign in first, then Huddle can move you into the room properly.",
   discordHandle: "",
   email: "",
   guildUrl: null,
@@ -170,20 +170,20 @@ function DiscordPageContent() {
           <p className={styles.eyebrow}>Discord</p>
           <h1>Get into the room.</h1>
           <p className={styles.heroBody}>
-            This is the social handoff after entry. The competition is the wedge. The room is what makes it feel alive.
+            This is where the competition turns into a living community. Link Discord, step inside, and let the room do its work.
           </p>
           {callbackStatus === "linked" ? (
-            <p className={styles.statusNote}>Discord came back cleanly. Huddle has that link now.</p>
+            <p className={styles.statusNote}>Discord came back cleanly. Huddle has the link now.</p>
           ) : null}
           {callbackStatus === "linked" && provisioningStatus === "failed" ? (
             <p className={styles.statusNote}>
-              Discord linked, but the server access step still needs a founder-side fix. The account link itself succeeded.
+              Discord linked, but server access still needs a founder-side fix. The account link itself succeeded.
             </p>
           ) : null}
           {callbackStatus === "failed" ? (
             <p className={styles.statusNote}>
               Discord callback failed.
-              {callbackReason ? ` ${callbackReason}` : " Use the manual bridge for now, then retry."}
+              {callbackReason ? ` ${callbackReason}` : " Retry the handoff and come back in."}
             </p>
           ) : null}
           {callbackStatus === "cancelled" ? (
@@ -192,7 +192,7 @@ function DiscordPageContent() {
           <div className={styles.ctaRow}>
             {!user ? (
               <a className={`${styles.button} ${styles.primary}`} href="/login">
-                Log in to connect Discord
+                Log in first
               </a>
             ) : isLinked ? (
               <a className={`${styles.button} ${styles.primary}`} href="/member">
@@ -205,7 +205,7 @@ function DiscordPageContent() {
                 onClick={() => void startDiscordOauth()}
                 type="button"
               >
-                {isStarted ? "Reconnect Discord" : "Connect Discord"}
+                {isStarted ? "Reconnect Discord" : "Link Discord"}
               </button>
             )}
             <a
@@ -244,9 +244,9 @@ function DiscordPageContent() {
         <section className={styles.sectionBlock}>
           <div className={styles.sectionHeading}>
             <p className={styles.eyebrow}>Connected</p>
-            <h2>The link is in place.</h2>
+            <h2>You are through the door.</h2>
             <p className={styles.sectionBody}>
-              Huddle has the Discord connection now. The remaining work is founder-side access cleanup only if the room setup needs adjustment.
+              Huddle has the Discord connection now. If anything still looks off, it is access cleanup, not identity.
             </p>
           </div>
 
@@ -256,8 +256,8 @@ function DiscordPageContent() {
               <p className={styles.successValue}>{discordHandle || "Connected cleanly"}</p>
               <p className={styles.detailBody}>
                 {discordHandle
-                  ? "This is the account Huddle has on file for the community step."
-                  : "The OAuth link succeeded even if the handle has not been surfaced yet."}
+                  ? "This is the account Huddle has on file for the room."
+                  : "The OAuth link succeeded even if the handle has not surfaced yet."}
               </p>
             </article>
 
@@ -265,7 +265,7 @@ function DiscordPageContent() {
               <p className={styles.detailLabel}>What now</p>
               <p className={styles.successValue}>You are past the hard part.</p>
               <p className={styles.detailBody}>
-                Go back inside. If the room access still looks off, a founder can clean that up without re-linking your account.
+                Go back inside. If access still looks off, a founder can fix it without making you link again.
               </p>
             </article>
           </div>
@@ -274,9 +274,9 @@ function DiscordPageContent() {
         <section className={styles.sectionBlock}>
           <div className={styles.sectionHeading}>
             <p className={styles.eyebrow}>Link status</p>
-            <h2>Confirm the social layer.</h2>
+            <h2>Finish the social handoff.</h2>
             <p className={styles.sectionBody}>
-              This is the interim bridge while the room logic gets cleaner. The goal is simple: connect Discord, get into the room, and let Huddle hold that state properly.
+              The goal is simple: connect Discord, get into the room, and let Huddle hold that state properly.
             </p>
           </div>
 
@@ -284,7 +284,7 @@ function DiscordPageContent() {
             <article className={styles.controlCard}>
               <span>1</span>
               <h3>Start the handoff</h3>
-              <p>Open Discord, find the room, and begin the inside step properly.</p>
+              <p>Open the Huddle server and begin the move from entry to inside.</p>
               <button
                 className={styles.inlineButton}
                 disabled={loading || working || !user}
@@ -298,7 +298,7 @@ function DiscordPageContent() {
             <article className={styles.controlCard}>
               <span>2</span>
               <h3>Save your handle</h3>
-              <p>Useful if a founder needs to reconcile room access manually.</p>
+              <p>Useful if a founder needs to reconcile access manually.</p>
               <label className={styles.field}>
                 <span>Discord handle</span>
                 <input
@@ -313,7 +313,7 @@ function DiscordPageContent() {
             <article className={styles.controlCard}>
               <span>3</span>
               <h3>Confirm you are in</h3>
-              <p>Once you have joined the room, mark it here so Huddle and the founder queue stop treating you as pending.</p>
+              <p>Once you have joined the room, mark it here so Huddle stops treating you as pending.</p>
               <button
                 className={`${styles.inlineButton} ${styles.confirm}`}
                 disabled={loading || working || !user}

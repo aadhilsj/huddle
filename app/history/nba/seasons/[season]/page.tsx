@@ -98,7 +98,7 @@ export default async function NbaSeasonArchivePage({
           <p className={styles.eyebrow}>Standings</p>
           <h2>The first table is now anchored.</h2>
           <p className={styles.sectionBody}>
-            Season 1 is the first proof that this archive can hold more than vibes. The regular season table, points totals, and streaks all belong here.
+            Season 1 is the first proof that this archive can hold more than vibes. The regular-season table, points totals, and streaks all belong here.
           </p>
         </div>
         <div className={styles.tableCard}>

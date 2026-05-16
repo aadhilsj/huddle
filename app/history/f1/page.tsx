@@ -6,7 +6,7 @@ export default function F1HistoryPage() {
     <HuddleShell mode="member" primaryAction={{ href: "/history/f1", label: "F1 archive" }}>
       <section className={`${styles.hero} ${styles.heroArchive}`}>
         <p className={styles.eyebrow}>F1 archive</p>
-        <h1>The cross-sport layer should still feel native.</h1>
+        <h1>The second world should still feel native.</h1>
         <p className={styles.heroBody}>
           F1 should not feel like a footnote to NBA. The archive needs to support a second serious world, even before every imported table is in place.
         </p>
@@ -33,9 +33,9 @@ export default function F1HistoryPage() {
       <section className={styles.section}>
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>What lands here</p>
-          <h2>Driver tables are not the whole story.</h2>
+          <h2>Driver tables are not the whole point.</h2>
           <p className={styles.sectionBody}>
-            This world should eventually hold season standings, constructors, rivalries, awards, and the second franchise identity a member can carry.
+            This world should eventually hold season standings, constructors, rivalries, awards, and the second identity a member can carry.
           </p>
         </div>
         <div className={styles.grid3}>
@@ -49,7 +49,7 @@ export default function F1HistoryPage() {
           </article>
           <article className={styles.card}>
             <h3>Awards</h3>
-            <p>The model is built for more than only title outcomes.</p>
+            <p>The model is built for more than title outcomes alone.</p>
           </article>
         </div>
       </section>

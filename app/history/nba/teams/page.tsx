@@ -14,7 +14,7 @@ export default function NbaFranchiseDirectoryPage() {
             <p className={styles.eyebrow}>Franchise directory</p>
             <h1>Every badge should lead somewhere real.</h1>
             <p className={styles.heroBody}>
-              Season 1 now gives the directory its first true layer: six live franchise pages with standings truth, playoff-entry rosters, and the first scars already attached.
+              Season 1 gives the directory its first true layer: six franchise pages with standings truth, playoff-entry rosters, and the first scars already attached.
             </p>
           </div>
           <div className={styles.heroVisual}>

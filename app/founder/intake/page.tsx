@@ -141,9 +141,9 @@ export default function FounderIntakePage() {
         <section className={styles.hero}>
           <div className={styles.heroCopy}>
             <p className={styles.eyebrow}>Founder intake</p>
-            <h1>Intake queue</h1>
+            <h1>Who is trying to get in?</h1>
             <p className={styles.heroBody}>
-              Real join requests, newest first.
+              Real join requests, newest first, with the signals that tell you whether the person is moving toward the room or drifting out.
             </p>
             <p className={styles.heroNote}>
               {requests[0] ? `Latest request ${requests[0].createdAt}.` : "No intake yet."}
@@ -160,7 +160,7 @@ export default function FounderIntakePage() {
         <section className={styles.sectionBlock} id="requests">
           <div className={styles.sectionHeading}>
             <p className={styles.eyebrow}>Requests</p>
-            <h2>Recent requests</h2>
+            <h2>Recent entries</h2>
           </div>
 
           {loading ? (
@@ -275,7 +275,7 @@ export default function FounderIntakePage() {
               ))}
             </div>
           ) : (
-            <div className={styles.emptyState}>No join requests yet. The route is live, but the queue is still empty.</div>
+            <div className={styles.emptyState}>No join requests yet. The route is live, but the room has not started filling from this surface yet.</div>
           )}
         </section>
       </RoleGate>

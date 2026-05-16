@@ -23,9 +23,9 @@ export default async function QueueSuccessPage({ searchParams }: QueueSuccessPag
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>Queue request received</p>
-          <h1>Your spot in line is noted.</h1>
+          <h1>Your place in line is saved.</h1>
           <p className={styles.heroBody}>
-            {league ? `You are now on the early queue for ${league.shortLabel}.` : "You are now on the early queue."} Huddle can use this to track demand and contact you when the next season opens.
+            {league ? `You are now on the early queue for ${league.shortLabel}.` : "You are now on the early queue."} Huddle can use this to track demand and call you in when the next season opens.
           </p>
           <div className={styles.ctaRow}>
             <Link href={leagueRoute} className={`${styles.button} ${styles.primary}`}>

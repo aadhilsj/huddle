@@ -29,14 +29,14 @@ const fallbackMemberData: MemberFoyerData = {
   competitionShortName: "FIFA World Cup",
   memberStatus: "Active",
   communityStatus: "Discord linked",
-  whatComesLater: "More leagues + profile",
+  whatComesLater: "More leagues + profile + history",
   entryStatus: "You are in",
   entryCountLabel: "43 entries confirmed so far",
   memberName: "You",
   memberEmail: "your inbox",
   paymentStatus: "Not started",
   stageLabel: "Request saved",
-  stageDetail: "Huddle has your place held. Payment and community steps come next.",
+  stageDetail: "Huddle has your place held. Payment and room access come next.",
   nextActionTitle: "Wait for the next handoff",
   nextActionBody: "The route is in place. The next real layer is payment and community onboarding.",
   timeline: [
@@ -168,17 +168,17 @@ function buildTimeline(data: {
   return [
     {
       label: "Join request",
-      detail: "Your initial request is in the system.",
+      detail: "Your entry request is in the system.",
       state: joinState
     },
     {
       label: "Payment",
-      detail: "This is what confirms the entry properly.",
+      detail: "This is what turns entry into commitment.",
       state: paymentState
     },
     {
       label: "Community",
-      detail: "Discord linking and role access are the final step inside.",
+      detail: "Discord linking and room access are the final step inside.",
       state: communityState
     }
   ];
@@ -288,7 +288,7 @@ export async function getMemberFoyerData(identity?: {
       if (onboardingRow?.event_type === "payment_confirmed") {
         communityStatus = "Discord pending";
         stageLabel = "Payment confirmed";
-        stageDetail = "The entry is confirmed. Community access is the next real step.";
+        stageDetail = "The entry is confirmed. Room access is the next real step.";
         nextActionTitle = "Finish community onboarding";
         nextActionBody = "Link Discord and apply the right access so the member actually lands inside.";
       }
@@ -296,7 +296,7 @@ export async function getMemberFoyerData(identity?: {
       if (onboardingRow?.event_type === "discord_link_started") {
         communityStatus = "Discord linking";
         stageLabel = "Discord linking";
-        stageDetail = "The member is in the middle of connecting the social layer.";
+        stageDetail = "The member is in the middle of connecting the room.";
         nextActionTitle = "Finish the inside handoff";
         nextActionBody = "Complete the Discord link and role step so the room feels real.";
       }
@@ -307,7 +307,7 @@ export async function getMemberFoyerData(identity?: {
       ) {
         communityStatus = "Discord linked";
         stageLabel = "Community ready";
-        stageDetail = "The member is connected to the room. Final onboarding can close cleanly now.";
+        stageDetail = "The member is connected to the room. Final onboarding can close now.";
         nextActionTitle = "Close the loop";
         nextActionBody = "Mark onboarding complete once the member is fully inside and oriented.";
       }
@@ -317,7 +317,7 @@ export async function getMemberFoyerData(identity?: {
         stageLabel = "Inside";
         stageDetail = "Payment, access, and member identity are all in the right place.";
         nextActionTitle = "Stay active";
-        nextActionBody = "The product work after this is retention, history, and profile depth.";
+        nextActionBody = "The work after this is retention, rivalry, history, and profile depth.";
       }
 
       if (onboardingRow?.event_type === "onboarding_failed" && onboardingRow.event_status === "failed") {
@@ -325,14 +325,14 @@ export async function getMemberFoyerData(identity?: {
         stageLabel = "Needs attention";
         stageDetail = "Something in the inside flow broke or stalled.";
         nextActionTitle = "Recover this member";
-        nextActionBody = "Check payment, Discord link, and role assignment so they do not fall out of the flow.";
+        nextActionBody = "Check payment, Discord link, and role assignment so they do not drift out of the flow.";
       }
     } else if (joinRequest?.status === "checkout_started") {
       entryStatus = "Checkout started";
       communityStatus = "Discord pending";
       paymentStatus = "Awaiting payment";
       stageLabel = "Checkout started";
-      stageDetail = "The member has moved out of intake and into the payment step.";
+      stageDetail = "The member has moved out of intake and into payment.";
       nextActionTitle = "Finish payment";
       nextActionBody = "Payment confirmation is what turns this request into a real member state.";
     } else if (joinRequest?.status === "approved") {
@@ -345,9 +345,9 @@ export async function getMemberFoyerData(identity?: {
       nextActionBody = "Payment confirmation should happen before the member is treated as fully inside.";
     } else if (joinRequest?.status === "reviewed") {
       stageLabel = "Founder review";
-      stageDetail = "The request is being looked at, but has not moved further yet.";
+      stageDetail = "The request is being reviewed, but has not moved further yet.";
       nextActionTitle = "Advance the request";
-      nextActionBody = "Once approved, this should move into payment and onboarding cleanly.";
+      nextActionBody = "Once approved, this should move into payment and onboarding without friction.";
     } else if (joinRequest?.status === "pending") {
       stageLabel = "Request saved";
       stageDetail = "The request is in the queue and waiting for the next handoff.";
