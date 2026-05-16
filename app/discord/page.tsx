@@ -14,6 +14,7 @@ type DiscordState = {
   detail: string;
   discordHandle: string;
   email: string;
+  guildUrl: string | null;
   label: string;
   state: "not_started" | "started" | "linked" | "inside" | "failed";
 };
@@ -23,6 +24,7 @@ const fallbackState: DiscordState = {
   detail: "Sign in first, then Huddle can tell you what the Discord step looks like.",
   discordHandle: "",
   email: "",
+  guildUrl: null,
   label: "Sign in required",
   state: "not_started"
 };
@@ -159,6 +161,7 @@ function DiscordPageContent() {
 
   const isLinked = discordState.state === "linked" || discordState.state === "inside";
   const isStarted = discordState.state === "started";
+  const openDiscordHref = discordState.guildUrl ?? "https://discord.com/app";
 
   return (
     <HuddleShell mode="member" primaryAction={{ href: "/member", label: "Back home" }}>
@@ -207,11 +210,11 @@ function DiscordPageContent() {
             )}
             <a
               className={`${styles.button} ${styles.secondary}`}
-              href="https://discord.com/app"
+              href={openDiscordHref}
               rel="noreferrer"
               target="_blank"
             >
-              Open Discord
+              Open Huddle Discord
             </a>
             {!isLinked ? (
               <a className={`${styles.button} ${styles.secondary}`} href="/member">

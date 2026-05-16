@@ -37,9 +37,16 @@ type DiscordStatePayload = {
   detail: string;
   discordHandle: string;
   email: string;
+  guildUrl: string | null;
   label: string;
   state: "not_started" | "started" | "linked" | "inside" | "failed";
 };
+
+function getDiscordGuildUrl() {
+  const guildId = process.env.DISCORD_GUILD_ID;
+
+  return guildId ? `https://discord.com/channels/${guildId}` : null;
+}
 
 function shortCompetitionName(name: string) {
   const cleaned = name
@@ -236,6 +243,7 @@ async function deriveDiscordState(
       detail: "You are already inside. Discord is linked and the room is ready.",
       discordHandle: member?.discord_handle ?? "",
       email: appUser.email,
+      guildUrl: getDiscordGuildUrl(),
       label: "Inside",
       state: "inside"
     };
@@ -247,6 +255,7 @@ async function deriveDiscordState(
       detail: "Something in the Discord handoff stalled. Retry the link or ask a founder to recover it.",
       discordHandle: member?.discord_handle ?? "",
       email: appUser.email,
+      guildUrl: getDiscordGuildUrl(),
       label: "Needs attention",
       state: "failed"
     };
@@ -261,6 +270,7 @@ async function deriveDiscordState(
       detail: "Discord is linked. The last step is founder-side orientation and access cleanup if needed.",
       discordHandle: member?.discord_handle ?? "",
       email: appUser.email,
+      guildUrl: getDiscordGuildUrl(),
       label: "Discord linked",
       state: "linked"
     };
@@ -272,6 +282,7 @@ async function deriveDiscordState(
       detail: "The Discord step has started. Finish it, then come back here once you are in the room.",
       discordHandle: member?.discord_handle ?? "",
       email: appUser.email,
+      guildUrl: getDiscordGuildUrl(),
       label: "Link in progress",
       state: "started"
     };
@@ -282,6 +293,7 @@ async function deriveDiscordState(
     detail: "This is the next handoff after payment. Join the room, then confirm the link back here.",
     discordHandle: member?.discord_handle ?? "",
     email: appUser.email,
+    guildUrl: getDiscordGuildUrl(),
     label: "Not started",
     state: "not_started"
   };
