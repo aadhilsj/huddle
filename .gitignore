@@ -4,6 +4,18 @@ node_modules
 .env
 .env.local
 .env.production
+.env.*
+!.env.example
+
+# Local secrets and credentials
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+secrets/
+
 dist
 .DS_Store
 .codex-bin
@@ -11,5 +23,21 @@ dist
 .tmp
 tmp
 tsconfig.tsbuildinfo
+
+# Local data, recovery material, and generated exports
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.bak
+*.backup
+backups/
+backup/
+recovery/
+exports/
+
+# Additional generated output
+build/
+coverage/
 
 gstack
